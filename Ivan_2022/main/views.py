@@ -7,3 +7,6 @@ def main(request):
 
 def info(request):
     return render(request, 'info.html')
+
+def us(request):
+    return render(request, 'us.html')
