@@ -12,6 +12,10 @@
         <h1>Создание новой задачи</h1><br>
         <form method="post">
             {% csrf_token %}
+            {{form.title}}
+            {{form.diskr}}
+            {{form.time}}
+
             <input type = 'text' placeholder = 'Название' class = 'form-control'><br>
             <textarea type = 'text' placeholder ='Описание' class = 'form-control'></textarea>
             <h6>Дата события:</h6>
