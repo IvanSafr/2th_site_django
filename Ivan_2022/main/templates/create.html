@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Новая задача
+{% endblock %}
+
+{% block pagecontent %}
+
+
+<div class = "row justify-content-center align-items-center">
+    <div class = "flex-column  col-md-8 ">
+        <h1>Создание новой задачи</h1><br>
+        <form method="post">
+            {% csrf_token %}
+            <input type = 'text' placeholder = 'Название' class = 'form-control'><br>
+            <textarea type = 'text' placeholder ='Описание' class = 'form-control'></textarea>
+            <h6>Дата события:</h6>
+            <input type = 'date' placeholder = 'Дата события:' class = 'form-control'><br>
+            <button type = 'submit' class="btn-success rounded">Добавить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

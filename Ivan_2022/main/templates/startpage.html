@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block pagecontent %}
+
+{% if tasks %}
+{% for el in tasks %}
+
+<div class = "row justify-content-center align-items-center">
+
+    <div class = "col col-md-9 bg-light border rounded">
+        <span class = "py-2 px-2 bg-success text-white rounded">{{el.time}}</span>
+        <h1 class="text-start">{{el.title}}</h1>
+        <p class = 'fs-3'>{{el.diskr}}</p>
+        <p class = 'fs-6'>Создано {{el.created}}</p>
+    </div>
+    <p></p>
+
+</div>
+
+
+{% endfor %}
+
+{% else %}
+    <p>У вас нет записей</p>
+{% endif %}
+{% endblock %}
+
