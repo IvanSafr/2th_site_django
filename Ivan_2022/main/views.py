@@ -17,6 +17,7 @@ def create(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect("home")
     form = TaskForm()
     context = {
         'form': form

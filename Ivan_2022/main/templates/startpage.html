@@ -10,12 +10,12 @@
 {% for el in tasks %}
 
 <div class = "row justify-content-center align-items-center">
-
-    <div class = "col col-md-9 bg-light border rounded">
-        <span class = "py-2 px-2 bg-success text-white rounded">{{el.id}}</span>
-        <h1 class="text-start">{{el.title}}</h1>
-        <p class = 'fs-3'>{{el.diskr}}</p>
-        <p class = 'fs-6'>Создано {{el.created}}</p>
+    <div class = "col col-md-8 bg-light border rounded">
+        <span class = "py-2 px-2 bg-$teal-500 text-white rounded">{{el.created}}</span>
+        <br>
+        <p></p>
+        <p class="fs-2" align="LEFT">{{el.title}}</p>
+        <p class = 'fs-3' align="left">{{el.diskr}}</p>
     </div>
     <p></p>
 
